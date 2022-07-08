@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "43da5284-7454-4bb1-9388-e3e6313b2157",
+		"name": "city-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Login token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All City",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjoiUk9MRV9BRE1JTiIsImV4cCI6MTY1NzI2NzA0MSwiaWF0IjoxNjU3MjQ5MDQxfQ.W6vOmr2fZv1yzePJbc_L1mgQegloyzLiDC2e57h2Mab0Sb1ri1AyGYmbKsaflKcbI4bdEp6DT3ucW-YcIZ_8rQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get City By Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1NzI3MTQ3MiwiaWF0IjoxNjU3MjUzNDcyfQ.PeizyG1I7Haui_aevkmuQCAlePZGBghnHmBFSJfwLvTWQosqMf1qDYAybBJHP9vqSXiIc8Qke_ZnAAEn4N9ABg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cities/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cities",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update City",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjoiUk9MRV9BRE1JTiIsImV4cCI6MTY1NzI3Mjg1OSwiaWF0IjoxNjU3MjU0ODU5fQ.pNBk8Yqj6sMD7Dz6HRKdXfxVGjLPZF2ZBfEy6O6zu8LJObFo-ZW2_2pWiNE1j7AYXuF0bgsh6SesJJpGrAm13g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Tokyo2\",\r\n    \"photo\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Skyscrapers_of_Shinjuku_2009_January.jpg/500px-Skyscrapers_of_Shinjuku_2009_January.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cities/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cities",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete City",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYXZhaW51c2UiLCJleHAiOjE2NTcyMjY1NzQsImlhdCI6MTY1NzIwODU3NH0.u5N0Ia7EY2RlyaSTrZHneyHWuzWeaDfD9g9gYbqkTJGKjqZfwNYke4kvvq1VKTtmnT8TjY4uX-yZoNV6AC-ycw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cities/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cities",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get City By id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjoiUk9MRV9BRE1JTiIsImV4cCI6MTY1NzI2NzA0MSwiaWF0IjoxNjU3MjQ5MDQxfQ.W6vOmr2fZv1yzePJbc_L1mgQegloyzLiDC2e57h2Mab0Sb1ri1AyGYmbKsaflKcbI4bdEp6DT3ucW-YcIZ_8rQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cities/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cities",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add City",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjoiUk9MRV9BRE1JTiIsImV4cCI6MTY1NzI3Mjg1OSwiaWF0IjoxNjU3MjU0ODU5fQ.pNBk8Yqj6sMD7Dz6HRKdXfxVGjLPZF2ZBfEy6O6zu8LJObFo-ZW2_2pWiNE1j7AYXuF0bgsh6SesJJpGrAm13g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cityId\": \"1002\",\r\n    \"name\": \"Toky\",\r\n    \"photo\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Skyscrapers_of_Shinjuku_2009_January.jpg/500px-Skyscrapers_of_Shinjuku_2009_January.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cities"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

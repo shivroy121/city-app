@@ -1,5 +1,9 @@
 # city-app
 
+
+You can clone the ui application from :-https://github.com/shivroy121/cityApp
+
+
 Role Based Access Control (RBAC) with Spring Boot and JWT
 
 Getting Started
@@ -24,4 +28,3 @@ Endpoints
 ![image](https://user-images.githubusercontent.com/21003713/177918176-369e25dd-b4f2-48e0-bebc-0a7f539a74c8.png)
 
 
-You can clone the ui application from :-https://github.com/shivroy121/cityApp
